@@ -5,7 +5,8 @@ Compilation results in two programs: `dfill` and `dtest`.
 
 `dfill` fills a device with 64-bit incrementing numbers.  `dtest` reads those numbers and checks they are right.
 
-== Theory of operation ==
+Theory of operation
+-------------------
 
 The idea behind this program is to fill a flash disk with numbers.  Starting at 0 and counting up the numbers are
 written to the raw disk as 64-bit values.  The first 8 bytes of the device should therefore be 
@@ -23,7 +24,8 @@ the numbers from the disk and compares them with what they should be.  As soon a
 the test program terminates reporting where the error was, what the expected number was, and what number was
 actually read.
 
-== Usage ==
+Usage
+-----
 
 First you need to fill a disk with numbers.  Caution should be used to ensure you get the right device name, since
 it's possible to completely distroy your Linux installation if you get the wrong device.  In this example the
