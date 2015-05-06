@@ -19,7 +19,7 @@ The second 8 bytes should be (little endian):
 
 And so on up to the end of the disk.
 
-The testing program then performs the same counting through the disk, but instead of writint to the disk it reads
+The testing program then performs the same counting through the disk, but instead of writing to the disk it reads
 the numbers from the disk and compares them with what they should be.  As soon as a number is found that is wrong
 the test program terminates reporting where the error was, what the expected number was, and what number was
 actually read.
