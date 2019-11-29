@@ -1,0 +1,2 @@
+bin_PROGRAMS=disktest
+disktest_SOURCES=disktest.c

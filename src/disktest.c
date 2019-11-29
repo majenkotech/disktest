@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
 #define BLKSZ 4096
 #define CHUNK (BLKSZ / sizeof(uint64_t))
@@ -46,7 +47,7 @@ int main(int argc, char **argv) {
             }
 
             if (write(fd, block, BLKSZ) != BLKSZ) {
-                printf("\rWritten %d MiB\n", (counter * sizeof(uint64_t)) / 1048576);
+                printf("\rWritten %lu MiB\n", (counter * sizeof(uint64_t)) / 1048576);
                 fflush(stdout);
                 close(fd);
                 return 0;
@@ -72,7 +73,7 @@ int main(int argc, char **argv) {
         } else {
 
             if (read(fd, block, BLKSZ) != BLKSZ) {
-                printf("\rRead %d MiB\n", (counter * sizeof(uint64_t)) / 1048576);
+                printf("\rRead %lu MiB\n", (counter * sizeof(uint64_t)) / 1048576);
                 fflush(stdout);
                 close(fd);
                 return 0;
